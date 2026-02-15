@@ -32,7 +32,9 @@ Things like:
 
 ## Gmail / Google Workspace
 
-- **Account**: lucylobster070@gmail.com
+- **Service account**: lucylobster070@gmail.com (for authentication)
+- **Mark's email**: mtantiloquax@gmail.com (send emails here)
+- **Mark's calendar**: mtantiloquax@gmail.com (check events here)
 - **Tool**: `gog` CLI (https://gogcli.sh)
 - **Services enabled**: Gmail, Calendar, Drive, Contacts, Docs, Sheets
 - **Auth**: OAuth (file-based keyring)
@@ -51,11 +53,14 @@ export GOG_ACCOUNT=lucylobster070@gmail.com
 # Search recent emails
 gog gmail search "in:inbox newer_than:7d" --max 10
 
-# Send email
-gog gmail send --to recipient@example.com --subject "Subject" --body "Message"
+# Send email to Mark
+gog gmail send --to mtantiloquax@gmail.com --subject "Subject" --body "Message"
 
-# Check calendar this week
-gog calendar events primary --from "2026-02-15" --to "2026-02-22"
+# Check Mark's calendar this week
+gog calendar events mtantiloquax@gmail.com --from "2026-02-15" --to "2026-02-22"
+
+# List all available calendars
+gog calendar calendars
 ```
 
 ## Why Separate?
